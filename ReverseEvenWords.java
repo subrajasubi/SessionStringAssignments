@@ -1,60 +1,50 @@
-package assignmentWeek4;
+package week1.day1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 public class ReverseEvenWords {
 	public static void main(String[] args) {
-		// Build a logic to reverse the even position words (output: I ma a erawtfos
-				// tester)
-				
-
-					/*
-					 * Declare the input as Follow String test = "I am a software tester";
-					 */
-					String input = "I am software tester";
-					
-					String outputString = "";
-					// a) split the words and have it in an array
-					String[] splitWords = input.split(" ");
-					
-					System.out.println(Arrays.toString(splitWords));
-					// find the Length of Array
-					int splitArrayLength = splitWords.length;
-					System.out.println("Array length:" + splitArrayLength);
-					// b) Traverse through each word (using loop)
-					//c) find the odd index within the loop (use mod operator)
-					
-					//d)split the words and have it in an array
-					// e)print the even position words in reverse order using another loop (nested
-					// loop)
-					for (int i = 0; i < splitArrayLength; i++) {
-						// System.out.println(splitWords[j]);
-						if ((i + 1) % 2 == 0) {
-					/*f) Convert words to character array if the position is even
-					else print the word as it is(concatenate space at the end).*/
-							char[] charArray = splitWords[i].toCharArray();
-							
-							String reverseWord = "";
-							
-							for (int k = charArray.length - 1; k >= 0; k--) {
-								//System.out.println(charArray[k]);
-								
-								reverseWord = reverseWord + charArray[k];
-								
-							}
-							outputString = outputString+reverseWord+" ";
-							
-						} else {
-							outputString = outputString+splitWords[i]+" ";
-						}
-					}
-					
-					System.out.println(outputString);
-					
-				
-
+		String str= "I am a software tester";
+		String[] split = str.split(" ");
+		for (int i = 0; i < split.length; i++) {
+			if(i%2!=0) {
+				char[] charArray = split[i].toCharArray();
+				for (int j = charArray.length-1; j >=0; j--) {
+					System.out.print(charArray[j]);
+				}
+			}
+			else {
+				System.out.print(" "+split[i]+" ");
 			}
 		}
-	
-
-
+//
+//		//Split the Text
+//		String[] splt=str.split(" ");
+//
+//		//Loop through the condition
+//
+//		for (int i = 0; i < splt.length; i++)
+//		{
+//			if (i%2 != 0) 
+//			{
+//				// change the even index string to character
+//
+//				char[] chr= splt[i].toCharArray();
+//				for (int j = chr.length-1; j >= 0; j--) 
+//				{
+//					System.out.print(chr[j]);
+//				}
+//
+//			}else
+//			{
+//
+//				System.out.print(" "+splt[i]+" ");
+//
+//			}
+//		}
+}
+}
